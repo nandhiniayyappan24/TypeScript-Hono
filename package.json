@@ -1,0 +1,23 @@
+{
+  "name": "typescript-hono",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node tools/runToolIntegration.mjs",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "tools:integrate": "node tools/runToolIntegration.mjs"
+  },
+  "dependencies": {
+    "hono": "3.12.12",
+    "@hono/node-server": "1.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.6",
+    "tsx": "4.19.2",
+    "typescript": "5.2.2",
+    "vitest": "1.6.0"
+  }
+}
